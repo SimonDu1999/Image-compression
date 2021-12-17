@@ -1,0 +1,9 @@
+A.  environment: Mac
+B.  How to compile: run "make" in the terminal(see makefile)
+    How to run: run "./cmpimage" in the terminal, and input the file path in the command line
+C.  read the input: in "main.cpp"
+    output: 2 images: in main() (The origianl image window and the compressed image window may occur on the same position)
+            compression ratio: in "encoder.cpp" compressImg()
+D.  stack of functions: main() -> encode.cpp compressImg() -> RGBCovertToYUV() -> computeDCTmatrix() -> DCTtransform()
+    -> quantization() -> decoder.cpp decompress() -> computeDCTInverseMatrix() -> DCTbackTransform()-> YuvConvertToRGB()
+    -> main()
